@@ -56,7 +56,17 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 
-// // 3 index route
+// 3 New
+app.get('/rsvps/new', (req, res)=>{
+  res.render('new.ejs');
+});
+
+// 4 Show
+app.get('/rsvps/show', (req, res)=>{
+  res.render('show.ejs');
+});
+
+//  3 index route
 app.get('/rsvps', (req, res)=>{
   res.render(
       'index.ejs',

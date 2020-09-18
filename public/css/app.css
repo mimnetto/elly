@@ -1,6 +1,31 @@
 /*Default properties */
+/* colors - #61060e #cec79f #51484f*/
 html,
 body {
-	height:100%;
   font-family: sans-serif;
+	height: 100%
+}
+
+.container {
+			margin-top: 5%;
+	    margin-bottom: 10%;
+}
+
+.bg-gold {
+    background-color: #cec79f !important;
+		border-top: 2px solid #61060e;
+}
+
+.navbar-light .navbar-brand {
+	color: #61060e !important;
+}
+
+hr.gold {
+  width: 50%;
+  height: 3px;
+  background-color: #cec79f;
+}
+
+.shadow {
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

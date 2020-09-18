@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<!DOCTYPE html>
-<html>
-
-<head>
+  <head>
   <%- include('./partials/head.ejs') %>
-</head>
-
+  </head>
   <body>
-<h1>Hello</h1>
+    <%- include('./partials/header.ejs') %>
+    <div class="container">
+  <div class="jumbotron mt-3">
+    <h1>Bottom Navbar example</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p>
+    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
+  </div>
+</div>
+  <%- include('./partials/nav.ejs') %>
   </body>
 </html>
