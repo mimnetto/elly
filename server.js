@@ -7,6 +7,14 @@ const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config()
+
+//___________________
+// public
+//___________________
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: false }))
+app.use(methodOverride('_method'));
+
 //___________________
 //Port
 //___________________
@@ -47,12 +55,20 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes
 //___________________
+
+// // 3 index route
+app.get('/rsvps', (req, res)=>{
+  res.render(
+      'index.ejs',
+  );
+});
+
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+    res.redirect('/rsvps')
 });
 
 //___________________
 //Listener
 //___________________
-app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+app.listen(PORT, () => console.log( '🥂👰🤵🥂', PORT));
