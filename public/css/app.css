@@ -7,10 +7,21 @@ body {
   height: 100%;
   background: url("/img/background.png") fixed;
   background-size: 100% auto;
+  margin-bottom: 15%;
 }
 
 .jumbotron {
-  background: url("/img/fancy.jpg") fixed;
+  /* background: url("/img/fancy.jpg") no-repeat; */
+background-color: #cec79f;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+min-height: 400px;
+width: auto
+}
+
+img.fancy {
+  max-height: 300px;
+  width: auto;
+  margin-right: 50px;
 }
 
 .container {
@@ -83,7 +94,22 @@ input.sign-it[type='submit']:hover {
   border: #cec79f solid 2px;
 }
 
+textarea#memory{
+  resize: none;
+  box-shadow: 2px 2px #cec79f;
+  border: #61060e solid 2px;
+}
 textarea#wishes{
+  resize: none;
+  box-shadow: 2px 2px #cec79f;
+  border: #61060e solid 2px;
+}
+input#name{
+  resize: none;
+  box-shadow: 2px 2px #cec79f;
+  border: #61060e solid 2px;
+}
+input#from{
   resize: none;
   box-shadow: 2px 2px #cec79f;
   border: #61060e solid 2px;
