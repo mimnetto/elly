@@ -67,15 +67,22 @@ app.get('/rsvps/show', (req, res)=>{
 });
 
 //  3 index route
-app.get('/rsvps', (req, res)=>{
+app.get('/rsvps/index', (req, res)=>{
   res.render(
       'index.ejs',
   );
 });
 
+// home
+app.get('/rsvps/home', (req, res)=>{
+  res.render(
+      'home.ejs',
+  );
+});
+
 //localhost:3000
 app.get('/' , (req, res) => {
-    res.redirect('/rsvps')
+    res.redirect('/rsvps/index')
 });
 
 //___________________

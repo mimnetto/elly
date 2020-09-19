@@ -9,18 +9,20 @@ body {
   background-size: 100% auto;
 }
 
+.jumbotron {
+  background: url("/img/fancy.jpg") fixed;
+}
+
 .container {
+  height: 100%;
+  background-color: transparent !important;
+  margin-bottom: 15%;
   margin-top: 5%;
-  margin-bottom: 10%;
 }
 
 .bg-gold {
   background-color: #cec79f !important;
   border-top: 2px solid #61060e;
-}
-
-.navbar-light .navbar-brand {
-  color: #61060e !important;
 }
 
 hr.gold {
@@ -34,9 +36,17 @@ hr.gold {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* fonts */
+h1.top-text {
+  font-family: al-fresco, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #61060e;
+}
+
 /* form stuff */
 .form-group {
-  width: 50%
+  width: 60%
 }
 
 label {
@@ -46,4 +56,40 @@ label {
   font-style: normal;
   margin-top: 25px;
   margin-bottom: 3px;
+}
+
+.box {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+input.sign-it {
+  font-family: wreath, serif;
+  font-size: 16pt;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #cec79f;
+  color: #61060e;
+  border: #61060e solid 2px;
+  border-radius: 5px;
+  margin-top: 3%;
+  width: 100px;
+}
+
+input.sign-it[type='submit']:hover {
+  cursor: pointer;
+  background-color:#61060e;
+  color:  #cec79f;
+  border: #cec79f solid 2px;
+}
+
+textarea#wishes{
+  resize: none;
+  box-shadow: 2px 2px #cec79f;
+  border: #61060e solid 2px;
+}
+
+/* nav */
+.navbar-light .navbar-brand {
+  color: #61060e !important;
 }
