@@ -53,6 +53,13 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 
+// 05 update
+app.put('/products/:id', (req, res)=>{
+    Rsvp.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
+        res.redirect('/rsvps');
+    });
+});
+
 // 01 New
 app.get('/rsvps/new', (req, res)=>{
   res.render('new.ejs');
@@ -60,10 +67,12 @@ app.get('/rsvps/new', (req, res)=>{
 
 
 //  03 index route
-app.get('/rsvps/index', (req, res)=>{
-  res.render(
-      'index.ejs',
-  );
+app.get('/rsvps/', (req, res)=>{
+  Rsvp.find({}, (error, allRsvps)=>{
+      res.render('index.ejs', {
+          rsvps: allRsvps
+      });
+  });
 });
 
 // 04 Show
@@ -90,9 +99,9 @@ app.post('/rsvps/', (req, res)=>{
 });
 
 //localhost:3000
-app.get('/' , (req, res) => {
-    res.redirect('/rsvps')
-});
+// app.get('/' , (req, res) => {
+//     res.redirect('/home')
+// });
 
 //___________________
 //Listener

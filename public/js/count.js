@@ -14,7 +14,7 @@ const x = setInterval(function() {
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
   // Output the result in an element
-  document.getElementById("count").innerHTML = days + " Days until the big day!";
+  document.getElementById("count").innerHTML = days + " Days until the wedding!";
 
 
   // If the count down is over, write some text

@@ -12,10 +12,10 @@ body {
 
 .jumbotron {
   /* background: url("/img/fancy.jpg") no-repeat; */
-background-color: #cec79f;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-min-height: 400px;
-width: auto
+  background-color: #cec79f;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-height: 400px;
+  width: auto
 }
 
 img.fancy {
@@ -44,6 +44,27 @@ hr.gold {
   background-color: #cec79f;
 }
 
+hr.gold-index {
+  width: 81%;
+  height: 2px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #cec79f;
+}
+
+.space {
+  margin-bottom: 55%;
+}
+
+p#count {
+  text-align: center;
+  font-family: wreath, serif;
+  font-size: 24pt;
+  font-weight: 700;
+  font-style: normal;
+  color: #61060e;
+}
+
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -67,16 +88,21 @@ li {
 }
 
 .show {
-   display: inline-block;
-}
-p.show {
-   font-weight: 400;
-   margin-left: 5%;
+  display: inline-block;
 }
 
-h3{
-   font-family: wreath, serif;
-   display: inline-block;
+p.show {
+  font-weight: 400;
+  margin-left: 5%;
+}
+
+h3 {
+  font-family: wreath, serif;
+  display: inline-block;
+}
+
+p.tex {
+    font-weight: 400;
 }
 
 /* form stuff */
@@ -113,27 +139,30 @@ input.sign-it {
 
 input.sign-it[type='submit']:hover {
   cursor: pointer;
-  background-color:#61060e;
-  color:  #cec79f;
+  background-color: #61060e;
+  color: #cec79f;
   border: #cec79f solid 2px;
 }
 
-textarea#memory{
+textarea#memory {
   resize: none;
   box-shadow: 2px 2px #cec79f;
   border: #61060e solid 2px;
 }
-textarea#wishes{
+
+textarea#wishes {
   resize: none;
   box-shadow: 2px 2px #cec79f;
   border: #61060e solid 2px;
 }
-input#name{
+
+input#name {
   resize: none;
   box-shadow: 2px 2px #cec79f;
   border: #61060e solid 2px;
 }
-input#from{
+
+input#from {
   resize: none;
   box-shadow: 2px 2px #cec79f;
   border: #61060e solid 2px;
@@ -141,5 +170,9 @@ input#from{
 
 /* nav */
 .navbar-light .navbar-brand {
+  color: #61060e !important;
+}
+
+a.nav-link:hover {
   color: #61060e !important;
 }

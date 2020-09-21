@@ -7,8 +7,44 @@
 
 <body>
   <%- include('./partials/header.ejs') %>
-  <div class="container">
-<h1 class="top-text text-center">Guests</h1>
+  <div class="container space">
+    <% for(let i = 0; i < rsvps.length; i++){ %>
+    <div class="content mx-auto">
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <h3 class="show">Name</h3>
+              <p class="show"><%=rsvps[i].name; %></p>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>
+              <h3 class="show">From</h3>
+              <p class="show"><%=rsvps[i].from; %></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <h3>Memory</h3>
+          <p class="tex"><%=rsvps[i].memory; %></p>
+        </li>
+        <li>
+          <h3>Wish</h3>
+          <p class="tex"><%=rsvps[i].wish; %></p>
+        </li>
+        <li>
+          <h6><%=rsvps[i].createdAt; %></h6>
+        </li>
+        <hr class="gold-index">
+
+      </ul>
+    </div>
+    <% } %>
   </div>
   <%- include('./partials/nav.ejs') %>
 </body>
