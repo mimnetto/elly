@@ -8,7 +8,7 @@ const Rsvp = require('./models/rsvps.js');
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config()
-const rsvpsSeed = require("./models/seed.js");
+// const rsvpsSeed = require("./models/seed.js");
 
 //___________________
 // public
@@ -56,10 +56,29 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 
+// 05 DELETE
+app.delete('/rsvps/:id', (req, res)=>{
+    Rsvp.findByIdAndRemove(req.params.id, (err, data)=>{
+        res.redirect('/rsvps/');//redirect back to index
+    });
+});
+
+// 06 edit
+app.get('/rsvps/:id/edit', (req, res)=>{
+    Rsvp.findById(req.params.id, (err, foundRsvp)=>{ //find the logs
+        res.render(
+    		'edit.ejs',
+    		{
+    			rsvp: foundRsvp //pass in found
+    		}
+    	);
+    });
+});
+
 // 05 update
 app.put('/products/:id', (req, res)=>{
     Rsvp.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
-        res.redirect('/rsvps');
+        res.redirect('/rsvps/');
     });
 });
 
@@ -101,30 +120,23 @@ app.post('/rsvps/', (req, res)=>{
   });
 });
 
-//localhost:3000
-// app.get('/' , (req, res) => {
-//     res.redirect('/home')
-// });
+
 
 // uncomment to add seed to db
-Rsvp.create(rsvpsSeed, (err, data) => {
-  if (err) console.log(err.message)
-  console.log('added rsvp data')
-})
+// Rsvp.create(rsvpsSeed, (err, data) => {
+//   if (err) console.log(err.message)
+//   console.log('added rsvp data')
+// })
+
+app.get(
+  '/dropdatabase/cannotundo/areyoursure/reallysure/okthen',
+  (req, res) => {
+    Rsvp.collection.drop()
+    res.send('You did it! You dropped the database!')
+  }
+)
 
 //___________________
 //Listener
 //___________________
 app.listen(PORT, () => console.log( '🥂👰🤵🥂 Wedding bells on', PORT));
-
-
-// mongoose
-// mongoose.connect('mongodb://localhost:27017/rsvps',
-// {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useFindAndModify: false
-// },
-//   () => {
-//   console.log('The connection with mongod is established')
-// })

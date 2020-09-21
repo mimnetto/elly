@@ -8,7 +8,7 @@
 <body>
   <%- include('./partials/header.ejs') %>
   <div class="container">
-    <div class="content mt-3">
+    <div class="content mx-auto">
 
       <div class="row">
         <div class="col">
@@ -31,17 +31,34 @@
       <ul>
         <li>
           <h3>Memory</h3>
-          <p><%=rsvps.memory; %></p>
+          <p class="tex"><%=rsvps.memory; %></p>
         </li>
         <li>
           <h3>Wish</h3>
-          <p><%=rsvps.wish; %></p>
+          <p class="tex"><%=rsvps.wish; %></p>
+        </li>
+        <li>
+          <h3>Side</h3>
+          <p class="tex"><%=rsvps.side; %>'s side</p>
         </li>
         <li>
           <h6><%=rsvps.createdAt; %></h6>
         </li>
       </ul>
     </div>
+    <div class="content d-flex justify-content-between mx-auto">
+  <form action="/rsvps/<%=rsvps.id; %>/edit">
+      <input class="cranberry" type="submit" value="Edit"/>
+  </form>
+
+<form action="/rsvps/<%=rsvps.id; %>?_method=DELETE" method="POST">
+    <input class="cranberry" type="submit" value="Delete"/>
+</form>
+
+<form action="/rsvps/" method="POST">
+    <input class="cranberry" type="submit" value="View all"/>
+</form>
+</div>
   </div>
   <%- include('./partials/nav.ejs') %>
 </body>
