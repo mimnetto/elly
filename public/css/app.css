@@ -7,7 +7,7 @@ body {
   height: 100%;
   background: url("/img/background.png") fixed no-repeat;
   background-size: 100% auto;
-  margin-bottom: 15%;
+  margin-bottom: 25%;
 }
 
 .jumbotron {
@@ -15,7 +15,8 @@ body {
   background-color: #cec79f;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-height: 400px;
-  width: auto
+  width: auto;
+  margin-bottom: 25%;
 }
 
 img.fancy {
@@ -45,7 +46,7 @@ hr.gold {
 }
 
 hr.gold-index {
-  width: 81%;
+  width: 90%;
   height: 2px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -53,7 +54,7 @@ hr.gold-index {
 }
 
 .space {
-  margin-bottom: 55%;
+  margin-bottom: 35%;
 }
 
 p#count {
