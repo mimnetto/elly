@@ -13,7 +13,7 @@
  -[x] A README.md file with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
 - [x] Have a link to your hosted working app in the README.md file in your github rep
 
-![ga](/public/img/gaLogo.png) <br>
+
 
 #### Restful Routes
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
@@ -26,5 +26,5 @@
 |6| Update | /rsvps/:id | PUT | n/a | Rsvp.findByIdAndUpdate(req.params.id) |
 |7| Destroy | /rsvps/:id | DELETE | n/a | Rsvp.findByIdAndRemove(req.params.id) |
 
-
+![ga](/public/img/gaLogo.png) <br>
 For General Assembly SEIR 810 Moss!

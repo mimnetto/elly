@@ -4,6 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
+const Rsvp = require('./models/rsvps.js');
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config()
@@ -56,14 +57,17 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 
-// 03 New
+// 01 New
 app.get('/rsvps/new', (req, res)=>{
   res.render('new.ejs');
 });
 
-// 04 Show
-app.get('/rsvps/show', (req, res)=>{
-  res.render('show.ejs');
+// 02 Create
+app.post('/rsvps/', (req, res)=>{
+    res.send(req.body);
+  Product.create(req.body, (error, createdProduct)=>{
+      res.redirect('/rsvps/'); //change to show
+  });
 });
 
 //  03 index route
@@ -71,6 +75,11 @@ app.get('/rsvps/index', (req, res)=>{
   res.render(
       'index.ejs',
   );
+});
+
+// 04 Show
+app.get('/rsvps/show', (req, res)=>{
+  res.render('show.ejs');
 });
 
 // 00 home
@@ -88,4 +97,16 @@ app.get('/' , (req, res) => {
 //___________________
 //Listener
 //___________________
-app.listen(PORT, () => console.log( '🥂👰🤵🥂', PORT));
+app.listen(PORT, () => console.log( '🥂👰🤵🥂 Wedding bells on', PORT));
+
+
+// mongoose
+mongoose.connect('mongodb://localhost:27017/rsvps',
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+},
+  () => {
+  console.log('The connection with mongod is established')
+})
