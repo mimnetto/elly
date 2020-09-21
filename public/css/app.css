@@ -58,7 +58,7 @@ h1.top-text {
 
 /* show */
 .content {
-  width: 75%
+  width: 75%;
 }
 
 li {
@@ -66,9 +66,22 @@ li {
   font-weight: 900;
 }
 
+.show {
+   display: inline-block;
+}
+p.show {
+   font-weight: 400;
+   margin-left: 5%;
+}
+
+h3{
+   font-family: wreath, serif;
+   display: inline-block;
+}
+
 /* form stuff */
 .form-group {
-  width: 75%
+  width: 75%;
 }
 
 label {
