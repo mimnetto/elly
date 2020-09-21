@@ -56,6 +56,16 @@ h1.top-text {
   color: #61060e;
 }
 
+/* show */
+.content {
+  width: 75%
+}
+
+li {
+  list-style-type: none;
+  font-weight: 900;
+}
+
 /* form stuff */
 .form-group {
   width: 75%

@@ -28,10 +28,6 @@ const PORT = process.env.PORT || 3003;
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// Connect to Mongo &
-// Fix Depreciation Warnings from Mongoose
-// May or may not need these depending on your Mongoose version
-mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -62,13 +58,6 @@ app.get('/rsvps/new', (req, res)=>{
   res.render('new.ejs');
 });
 
-// 02 Create
-app.post('/rsvps/', (req, res)=>{
-    res.send(req.body);
-  Product.create(req.body, (error, createdProduct)=>{
-      res.redirect('/rsvps/'); //change to show
-  });
-});
 
 //  03 index route
 app.get('/rsvps/index', (req, res)=>{
@@ -78,15 +67,26 @@ app.get('/rsvps/index', (req, res)=>{
 });
 
 // 04 Show
-app.get('/rsvps/show', (req, res)=>{
-  res.render('show.ejs');
+app.get('/rsvps/:id', (req, res)=>{
+  Rsvp.findById(req.params.id, (err, foundRsvps)=>{
+      res.render('show.ejs', {
+          rsvps: foundRsvps
+      });
+  });
 });
 
 // 00 home
-app.get('/rsvps/', (req, res)=>{
+app.get('/', (req, res)=>{
   res.render(
       'home.ejs',
   );
+});
+
+// 02 Create
+app.post('/rsvps/', (req, res)=>{
+  Rsvp.create(req.body, (error, createdRsvp)=>{
+        res.redirect('/rsvps/' + createdRsvp.id)
+  });
 });
 
 //localhost:3000

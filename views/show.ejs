@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <div class="container">
+  <div class="content">
+    <ul>
+      <li><h6><%=rsvps.createdAt; %></h6>
+        </li>
+
+      <li>
+        <h5>Name</h5> <%=rsvps.name; %>
+    </li>
+    <li>
+      <h5>From</h5> <%=rsvps.from; %>
+  </li>
+  <li>
+    <h5>Memory</h5> <%=rsvps.memory; %>
+</li>
+  <li>
+    <h5>Wish</h5> <%=rsvps.wish; %>
+</li>
+    </ul>
+  </div>
+</div>
+  <%- include('./partials/nav.ejs') %>
+  </body>
+</html>
