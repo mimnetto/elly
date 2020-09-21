@@ -8,6 +8,7 @@ const Rsvp = require('./models/rsvps.js');
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config()
+const rsvpsSeed = require("./models/seed.js");
 
 //___________________
 // public
@@ -27,6 +28,8 @@ const PORT = process.env.PORT || 3003;
 //___________________
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+
 
 
 // Error / success
@@ -103,6 +106,12 @@ app.post('/rsvps/', (req, res)=>{
 //     res.redirect('/home')
 // });
 
+// uncomment to add seed to db
+Rsvp.create(rsvpsSeed, (err, data) => {
+  if (err) console.log(err.message)
+  console.log('added rsvp data')
+})
+
 //___________________
 //Listener
 //___________________
@@ -110,12 +119,12 @@ app.listen(PORT, () => console.log( '🥂👰🤵🥂 Wedding bells on', PORT));
 
 
 // mongoose
-mongoose.connect('mongodb://localhost:27017/rsvps',
-{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
-},
-  () => {
-  console.log('The connection with mongod is established')
-})
+// mongoose.connect('mongodb://localhost:27017/rsvps',
+// {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useFindAndModify: false
+// },
+//   () => {
+//   console.log('The connection with mongod is established')
+// })

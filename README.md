@@ -1,6 +1,8 @@
-# Wedding Website App!
+# Wedding Guestbook App!
 
-![Animal Crossing](/public/img/co_bl.png)   _By Mimi Netto_
+![Colleen and Blake](/public/img/co_bl.png)   _By Mimi Netto_
+
+[Wedding Guestbook](https://ellypuppy.herokuapp.com/)
 
 ## Minimum Viable Product
 
