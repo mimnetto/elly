@@ -44,7 +44,8 @@
 
 ### Struggles
 
-
+* It took a while to configure everything once I made controllers. There was a lot of debugging.
+* Ran into several database issues but luckily they all were pretty easy to solve.
 
 ### Failed Attempts
 * Timestamp date formating
