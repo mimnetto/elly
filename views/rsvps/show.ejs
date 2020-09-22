@@ -9,7 +9,7 @@
   <%- include('../partials/header.ejs') %>
   <div class="container">
     <div class="content mx-auto">
-      <img class="float-right pic" src="<%=rsvps.img%>">
+      <a href="<%=rsvps.img%>" target="_blank"><img class="float-right pic" src="<%=rsvps.img%>"></a>
           <ul>
             <li>
               <h1 class="show"><%=rsvps.name; %></h1>
@@ -31,6 +31,7 @@
           <p class="tex"><%=rsvps.side; %></p>
         </li>
         <li>
+
           <h6><%=rsvps.createdAt; %></h6>
         </li>
       </ul>
