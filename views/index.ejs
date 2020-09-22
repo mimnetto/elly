@@ -7,9 +7,12 @@
 
 <body>
   <%- include('./partials/header.ejs') %>
-  <div class="container space">
+  <div class="container">
     <% for(let i = 0; i < rsvps.length; i++){ %>
     <div class="content mx-auto">
+      <div class="signed">
+
+
       <a href="<%=rsvps[i].img%>" target="_blank"><img class="float-right pic" src="<%=rsvps[i].img%>"> </a><br>
           <ul>
             <li>
@@ -32,6 +35,7 @@
         <li>
           <h6><%=rsvps[i].createdAt; %></h6>
         </li>
+      </div>
         <hr class="gold-index">
 
       </ul>

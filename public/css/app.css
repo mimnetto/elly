@@ -57,11 +57,14 @@ hr.gold-index {
 
 p#count {
   text-align: center;
-  font-family: wreath, serif;
-  font-size: 24pt;
+  font-family: rumba-small, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14pt;
   font-weight: 700;
   font-style: normal;
   color: #61060e;
+  text-transform: capitalize;
 }
 
 .shadow {
@@ -85,12 +88,12 @@ h6 {
   width: 75%;
 }
 
-.pic{
+.pic {
   max-height: 200px;
   max-width: 250px;
-border-radius: 5px;
+  border-radius: 5px;
   margin: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 li {
@@ -107,8 +110,8 @@ p.show {
 }
 
 h1.show {
-    font-family: wreath, serif;
-    color: #61060e;
+  font-family: wreath, serif;
+  color: #61060e;
 }
 
 h3 {
@@ -117,16 +120,19 @@ h3 {
 }
 
 p.tex {
-    font-weight: 400;
+  font-weight: 400;
 }
 
-i.cran{
+i.cran {
   color: #61060e;
 }
 
-/* li.show{
-padding-inline-start: 30px;
-} */
+.signed {
+  background-color: #ffffffd1;
+  border: 1px #cec79f47 solid;
+  border-radius: 10px;
+  /* box-shadow: 0 6px 10px 0 rgba(50 6 13 / 13%); */
+}
 
 /* form stuff */
 .form-group {
@@ -148,8 +154,8 @@ label {
 }
 
 input.sign-it {
-  font-family: wreath, serif;
-  font-size: 16pt;
+  font-family: rumba-small, sans-serif;
+  font-size: 12pt;
   font-weight: 500;
   font-style: normal;
   background-color: #cec79f;
@@ -167,9 +173,14 @@ input.sign-it[type='submit']:hover {
   color: #cec79f;
   border: #cec79f solid 2px;
 }
+
+.buttons {
+  margin-top: 50px;
+}
+
 input.cranberry {
-  font-family: wreath, serif;
-  font-size: 16pt;
+  font-family: rumba-small, sans-serif;
+  font-size: 12pt;
   font-weight: 500;
   font-style: normal;
   background-color: #cec79f;
@@ -177,12 +188,9 @@ input.cranberry {
   border: #61060e solid 2px;
   border-radius: 5px;
   margin-top: 3%;
-  width: 100px;
+  min-width: 150px;
+  padding: 5%;
   display: inline-block;
-}
-
-.buttons {
-    margin-top: 50px;
 }
 
 input.cranberry[type='submit']:hover {
@@ -192,10 +200,38 @@ input.cranberry[type='submit']:hover {
   border: #cec79f solid 2px;
 }
 
+input.goldie {
+  font-family: rumba-small, sans-serif;
+  font-size: 12pt;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #61060e;
+  color: #cec79f;
+  border: #cec79f solid 2px;
+  border-radius: 5px;
+  margin-top: 3%;
+  min-width: 150px;
+  padding: 5%;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input.goldie[type='submit']:hover {
+  cursor: pointer;
+  background-color: #cec79f;
+  color: #61060e;
+  border: #61060e solid 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inline {
+  display: inline-block;
+}
+
 p.check {
-    font-weight: 400;
-    font-family: sans-serif;
-    font-size: 14pt;
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 14pt;
 }
 
 label.side {
@@ -230,6 +266,7 @@ input#from {
   box-shadow: 2px 2px #cec79f;
   border: #61060e solid 2px;
 }
+
 input#img {
   resize: none;
   box-shadow: 2px 2px #cec79f;
@@ -239,6 +276,13 @@ input#img {
 /* nav */
 .navbar-light .navbar-brand {
   color: #61060e !important;
+  font-family: rumba-small, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0 / 82%);
 }
 
 a.nav-link:hover {
