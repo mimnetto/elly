@@ -9,7 +9,7 @@
   <%- include('./partials/header.ejs') %>
   <div class="container">
     <div class="content mx-auto">
-
+      <img class="float-right pic" src="<%=rsvps.img%>">
       <div class="row">
         <div class="col">
           <ul>
@@ -46,7 +46,7 @@
         </li>
       </ul>
     </div>
-    <div class="content d-flex justify-content-between mx-auto">
+    <div class="content d-flex justify-content-between mx-auto buttons">
   <form action="/rsvps/<%=rsvps.id; %>/edit">
       <input class="cranberry" type="submit" value="Edit"/>
   </form>
@@ -55,7 +55,7 @@
     <input class="cranberry" type="submit" value="Delete"/>
 </form>
 
-<form action="/rsvps/" method="POST">
+<form action="/rsvps/">
     <input class="cranberry" type="submit" value="View all"/>
 </form>
 </div>

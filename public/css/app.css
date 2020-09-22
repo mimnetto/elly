@@ -76,9 +76,21 @@ h1.top-text {
   color: #61060e;
 }
 
+h6 {
+  font-style: italic;
+}
+
 /* show */
 .content {
   width: 75%;
+}
+
+.pic{
+  max-height: 200px;
+  max-width: 250px;
+border-radius: 5px;
+  margin: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 li {
@@ -92,7 +104,11 @@ li {
 
 p.show {
   font-weight: 400;
-  margin-left: 5%;
+}
+
+h1.show {
+    font-family: wreath, serif;
+    color: #61060e;
 }
 
 h3 {
@@ -103,6 +119,10 @@ h3 {
 p.tex {
     font-weight: 400;
 }
+
+/* li.show{
+padding-inline-start: 30px;
+} */
 
 /* form stuff */
 .form-group {
@@ -143,7 +163,7 @@ input.sign-it[type='submit']:hover {
   color: #cec79f;
   border: #cec79f solid 2px;
 }
-.cranberry {
+input.cranberry {
   font-family: wreath, serif;
   font-size: 16pt;
   font-weight: 500;
@@ -157,7 +177,11 @@ input.sign-it[type='submit']:hover {
   display: inline-block;
 }
 
-.cranberry[type='submit']:hover {
+.buttons {
+    margin-top: 50px;
+}
+
+input.cranberry[type='submit']:hover {
   cursor: pointer;
   background-color: #61060e;
   color: #cec79f;
@@ -198,6 +222,11 @@ input#name {
 }
 
 input#from {
+  resize: none;
+  box-shadow: 2px 2px #cec79f;
+  border: #61060e solid 2px;
+}
+input#img {
   resize: none;
   box-shadow: 2px 2px #cec79f;
   border: #61060e solid 2px;

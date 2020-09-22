@@ -10,31 +10,20 @@
   <div class="container space">
     <% for(let i = 0; i < rsvps.length; i++){ %>
     <div class="content mx-auto">
-      <div class="row">
-        <div class="col">
+      <a href="<%=rsvps[i].img%>" target="_blank"><img class="float-right pic" src="<%=rsvps[i].img%>"> </a><br>
           <ul>
             <li>
-              <h3 class="show">Name</h3>
-              <p class="show"><%=rsvps[i].name; %></p>
+              <h1 class="show"><%=rsvps[i].name; %></h1>
             </li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
             <li>
-              <h3 class="show">From</h3>
               <p class="show"><%=rsvps[i].from; %></p>
             </li>
-          </ul>
-        </div>
-      </div>
-      <ul>
         <li>
-          <h3>Memory</h3>
+          <h3>Favorite Memory of The Couple</h3>
           <p class="tex"><%=rsvps[i].memory; %></p>
         </li>
         <li>
-          <h3>Wish</h3>
+          <h3>Wishes to Colleen and Blake</h3>
           <p class="tex"><%=rsvps[i].wish; %></p>
         </li>
         <li>
