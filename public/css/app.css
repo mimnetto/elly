@@ -85,7 +85,11 @@ h6 {
 
 /* show */
 .content {
-  width: 75%;
+  width: 85%;
+}
+
+ul {
+  padding-left: 2%;
 }
 
 .pic {
