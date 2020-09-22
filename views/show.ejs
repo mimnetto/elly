@@ -10,36 +10,25 @@
   <div class="container">
     <div class="content mx-auto">
       <img class="float-right pic" src="<%=rsvps.img%>">
-      <div class="row">
-        <div class="col">
           <ul>
             <li>
-              <h3 class="show">Name</h3>
-              <p class="show"><%=rsvps.name; %></p>
+              <h1 class="show"><%=rsvps.name; %></h1>
             </li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
             <li>
-              <h3 class="show">From</h3>
-              <p class="show"><%=rsvps.from; %></p>
+
+              <i class="fa fa-map-marker cran"></i> <p class="show"><%=rsvps.from; %></p>
             </li>
-          </ul>
-        </div>
-      </div>
-      <ul>
         <li>
-          <h3>Memory</h3>
+          <h3>Favorite Memory of The Couple</h3>
           <p class="tex"><%=rsvps.memory; %></p>
         </li>
         <li>
-          <h3>Wish</h3>
+          <h3>Wishes to Colleen and Blake</h3>
           <p class="tex"><%=rsvps.wish; %></p>
         </li>
         <li>
           <h3>Side</h3>
-          <p class="tex"><%=rsvps.side; %>'s side</p>
+          <p class="tex"><%=rsvps.side; %></p>
         </li>
         <li>
           <h6><%=rsvps.createdAt; %></h6>

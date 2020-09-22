@@ -120,6 +120,10 @@ p.tex {
     font-weight: 400;
 }
 
+i.cran{
+  color: #61060e;
+}
+
 /* li.show{
 padding-inline-start: 30px;
 } */
