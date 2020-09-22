@@ -9,6 +9,7 @@ const rsvpsSchema = new mongoose.Schema({
     side:  { type: String, required: true },
 }, {timestamps: true});
 
+
 const Rsvp = mongoose.model('Rsvp', rsvpsSchema);
 
 module.exports = Rsvp;

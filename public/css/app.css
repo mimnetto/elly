@@ -96,7 +96,7 @@ ul {
   max-height: 200px;
   max-width: 150px;
   border-radius: 5px;
-  margin: 4px;
+  margin: 4px 4px 14px 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -166,8 +166,8 @@ input.sign-it {
   color: #61060e;
   border: #61060e solid 2px;
   border-radius: 5px;
-  margin-top: 3%;
-  width: 100px;
+  min-width: 150px;
+  min-height: 50px;
   display: block;
 }
 
@@ -191,9 +191,8 @@ input.cranberry {
   color: #61060e;
   border: #61060e solid 2px;
   border-radius: 5px;
-  margin-top: 3%;
   min-width: 150px;
-  padding: 5%;
+  min-height: 50px;
   display: inline-block;
 }
 
