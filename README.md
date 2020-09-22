@@ -16,7 +16,7 @@
 - [x] Have a link to your hosted working app in the README.md file in your github rep
 
 #### Wireframes
-[Index](Wireframe00.png)
+![Index](/public/img/wireframe00.png)
 
 #### Restful Routes
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
