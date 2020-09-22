@@ -15,6 +15,8 @@
  -[x] A README.md file with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
 - [x] Have a link to your hosted working app in the README.md file in your github rep
 
+#### Wireframes
+[Index](/public/img/Wireframe00.png)
 
 #### Restful Routes
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
@@ -45,14 +47,21 @@
 
 
 ### Failed Attempts
-* Timestamp date formatting
+* Timestamp date formating
   * I was just really confused on where to put what. I tried for a really long time but just couldn't find where everything needed to be.
+* Radio
+  * I tried for awhile to get the radio selection correct during editing
 * Photo upload
   * I wanted the user to be able to upload a photo but it didn't take long before I decided I wasn't ready for that
 
 ### Wins!
 
-### Other Notes
+* I was able to debug database issues on my own
+* I enjoyed making this!
+
+### Thoughts and Notes
+
+* I feel like I held back a little because I was afraid one thing can throw something out of wack. I'm still not confident enough with my JavaScript to get super adventurous.
 
 ![ga](/public/img/gaLogo.png) <br>
 For General Assembly SEIR 810 Moss!
