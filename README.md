@@ -63,6 +63,7 @@
 ### Thoughts and Notes
 
 * I feel like I held back a little because I was afraid one thing can throw something out of wack. I'm still not confident enough with my JavaScript to get super adventurous.
+* I actually want to use this page and was thinking about how I could get it work with what I know but I would have to figure out how to make the user only able to edit their own post when logged in.
 
 ![ga](/public/img/gaLogo.png) <br>
 For General Assembly SEIR 810 Moss!
